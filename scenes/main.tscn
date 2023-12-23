@@ -135,11 +135,12 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_23gp1")
 velocity = Vector2(-100, 0)
-start_pos = Vector2(125, -63)
+start_pos = Vector2(124, -63)
 
 [node name="Background" type="TextureRect" parent="ScrollingBackgrounds"]
 texture_filter = 1
 texture_repeat = 2
+layout_mode = 0
 offset_left = -130.0
 offset_top = -63.0
 offset_right = 126.0
@@ -161,6 +162,7 @@ metadata/_aseprite_wizard_config_ = {
 [node name="Background2" type="TextureRect" parent="ScrollingBackgrounds"]
 texture_filter = 1
 texture_repeat = 2
+layout_mode = 0
 offset_left = 126.0
 offset_top = -63.0
 offset_right = 382.0
