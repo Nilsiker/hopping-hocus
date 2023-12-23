@@ -29,6 +29,7 @@ func initialize_on_game_start():
 
 
 func _physics_process(delta):
+	if health==0: return
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta * 0.5
@@ -39,7 +40,7 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_pressed("ui_accept") :
 		if Input.is_action_just_pressed("ui_accept"):
-			flydust = max(flydust - 5, 0)
+			flydust = max(flydust - 10, 0)
 		if flydust:
 			velocity.y = JUMP_VELOCITY
 		flydust = max(flydust - 50 * delta, 0)

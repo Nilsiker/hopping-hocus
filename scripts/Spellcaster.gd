@@ -28,6 +28,7 @@ func _process(delta):
 
 
 func _unhandled_input(event):
+	if get_parent().health == 0: return
 	if charges > 0 and event.is_action_pressed("fireball"):
 		charges -= 1
 		charges_changed.emit(charges)

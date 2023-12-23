@@ -45,6 +45,7 @@ func start_game():
 		high_score = FileAccess.open("user://high_score.save", FileAccess.READ).get_line() as int
 	else: high_score = 0
 	high_score_label.update_text(str(high_score))
+	game_over = false
 
 
 func _input(event):
@@ -72,3 +73,4 @@ func _on_hocus_died():
 		$CanvasLayer/GameOver/VBoxContainer/HighScore.visible = true
 		var save = FileAccess.open("user://high_score.save", FileAccess.WRITE)
 		save.store_line(str(score))
+	game_over = true
