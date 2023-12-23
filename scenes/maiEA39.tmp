@@ -135,7 +135,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_23gp1")
 velocity = Vector2(-100, 0)
-start_pos = Vector2(125, -63)
 
 [node name="Background" type="TextureRect" parent="ScrollingBackgrounds"]
 texture_filter = 1
@@ -164,6 +163,27 @@ texture_repeat = 2
 offset_left = 126.0
 offset_top = -63.0
 offset_right = 382.0
+offset_bottom = 65.0
+texture = ExtResource("2_mmgpb")
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"op_exp": false,
+"player": "",
+"source": "res://assets/bg.aseprite"
+}
+
+[node name="Background3" type="TextureRect" parent="ScrollingBackgrounds"]
+texture_filter = 1
+texture_repeat = 2
+offset_left = 382.0
+offset_top = -63.0
+offset_right = 638.0
 offset_bottom = 65.0
 texture = ExtResource("2_mmgpb")
 metadata/_aseprite_wizard_config_ = {
@@ -331,7 +351,7 @@ layout_mode = 2
 texture = SubResource("CanvasTexture_e8dgl")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
+zoom = Vector2(2, 2)
 
 [node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2(-120, 68)
