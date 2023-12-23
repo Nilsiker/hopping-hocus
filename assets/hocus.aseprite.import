@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://c7721ckqyfnra"
+path="res://.godot/imported/hocus.aseprite-1e4bed5df5e3841437ca25df49586f86.res"
+
+[deps]
+
+source_file="res://assets/hocus.aseprite"
+dest_files=["res://.godot/imported/hocus.aseprite-1e4bed5df5e3841437ca25df49586f86.res"]
+
+[params]
+

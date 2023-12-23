@@ -1,0 +1,88 @@
+[gd_scene load_steps=9 format=3 uid="uid://dcswdrhxrbuis"]
+
+[ext_resource type="Script" path="res://scripts/Enemy.gd" id="1_mx4dt"]
+[ext_resource type="Texture2D" uid="uid://26fhyhcrb03k" path="res://assets/enemy.png" id="2_rnq2m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gr5ej"]
+size = Vector2(17, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t13fk"]
+atlas = ExtResource("2_rnq2m")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0ugq"]
+atlas = ExtResource("2_rnq2m")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdfuv"]
+atlas = ExtResource("2_rnq2m")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8nuw8"]
+atlas = ExtResource("2_rnq2m")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rdaw7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t13fk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0ugq")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdfuv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8nuw8")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 10.0
+}]
+
+[node name="Enemy" type="Area2D"]
+script = ExtResource("1_mx4dt")
+velocity = Vector2(-100, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_gr5ej")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, -8)
+sprite_frames = SubResource("SpriteFrames_rdaw7")
+animation = &"Idle"
+autoplay = "Idle"
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"op_exp": false,
+"source": "res://assets/enemy.aseprite"
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+metadata/_aseprite_wizard_config_ = {
+"i_mode": -1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"op_exp": false,
+"player": "",
+"source": ""
+}
