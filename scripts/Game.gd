@@ -41,6 +41,10 @@ func start_game():
 	Engine.time_scale = 1
 	$CanvasLayer/GameOver.visible = false
 	$CanvasLayer/MarginContainer.visible = true
+	if FileAccess.file_exists("user://high_score.save"):
+		high_score = FileAccess.open("user://high_score.save", FileAccess.READ).get_line() as int
+	else: high_score = 0
+	high_score_label.update_text(str(high_score))
 
 
 func _input(event):

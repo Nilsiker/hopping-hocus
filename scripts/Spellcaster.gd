@@ -20,6 +20,7 @@ func _ready():
 func clear_on_start():
 	charges = 4
 	charges_changed.emit(4)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
